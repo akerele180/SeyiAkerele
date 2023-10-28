@@ -11,12 +11,12 @@ li {
   line-height: 30px;
   transition: all ease-in 300ms;
 }
-li:hover{
+li:hover {
   transform: scale(105%);
   font-weight: 500;
   transition: all ease-in 100ms;
 }
-li::before{
+li::before {
   position: absolute;
   content: "";
   height: 1px;
@@ -25,8 +25,8 @@ li::before{
   bottom: 0;
   transition: all ease-in 300ms;
 }
-li:hover::before{
-  width: 100%;  
+li:hover::before {
+  width: 100%;
   transition: all ease-in 300ms;
 }
 body {
@@ -55,6 +55,9 @@ header nav ul {
   justify-content: center;
   /* justify-content: space-evenly; */
 }
+header li {
+  transform: translateY(-8vh);
+}
 main {
   height: 90vh;
   position: relative;
@@ -70,10 +73,12 @@ h1 {
   font-size: 72px;
   line-height: 1.1em;
   text-shadow: none;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 }
 h2 {
   font-weight: 300;
   font-size: 25px;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 }
 
 @media screen and (max-width: 426px) {
