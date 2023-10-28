@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {
+  cursor: pointer;
+  list-style-type: none;
+  margin: 0 15px;
+  position: relative;
+  line-height: 30px;
+  transition: all ease-in 300ms;
+}
+li:hover{
+  transform: scale(105%);
+  font-weight: 500;
+  transition: all ease-in 100ms;
+}
+li::before{
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background: black;
+  bottom: 0;
+  transition: all ease-in 300ms;
+}
+li:hover::before{
+  width: 100%;  
+  transition: all ease-in 300ms;
+}
+body {
+  height: 100vh;
+  background-image: url("./bnw_image0.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 15%;
+  background-color: black;
+  font-family: "Work Sans", sans-serif;
+}
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+}
+header nav {
+  width: 50vw;
+  text-transform: uppercase;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-evenly; */
+}
+main {
+  height: 90vh;
+  position: relative;
+  padding: 0 5vw;
+}
+main div {
+  position: absolute;
+  bottom: 15%;
+  transform: translateY(-50%);
+}
+h1 {
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 1.1em;
+  text-shadow: none;
+}
+h2 {
+  font-weight: 300;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 426px) {
+  body {
+    background-position-x: center;
+  }
+  header nav {
+    width: 90%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+}
